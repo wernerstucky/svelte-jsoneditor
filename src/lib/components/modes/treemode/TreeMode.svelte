@@ -1417,12 +1417,16 @@
     // json and text defined, or having none defined
     if (text !== undefined) {
       const content = { text, json: undefined }
+      //WS debug
+      console.log("WS emitOnChange text in TreeMode", content); 
       onChange(content, previousContent, {
         contentErrors: validate(),
         patchResult
       })
     } else if (json !== undefined) {
       const content = { text: undefined, json }
+      //WS debug
+      console.log("WS emitOnChange json in TreeMode", content); 
       onChange(content, previousContent, {
         contentErrors: validate(),
         patchResult

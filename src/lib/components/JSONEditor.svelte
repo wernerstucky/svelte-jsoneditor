@@ -169,6 +169,9 @@
       throw new Error(contentError)
     }
 
+    //WS debug
+    console.log('WS updatedContent', updatedContent)
+
     content = updatedContent
 
     await tick() // await rerender
